@@ -1,22 +1,25 @@
 require 'json'
 
+version = '0.4.1'
+
 a = {}
-a['source'] = 'https://drive.google.com/uc?export=download&id=0B-jblWXS1ZxsNmJIUzBscWVKU2M';
+a['source'] = 'https://drive.google.com/uc?id=0B6pVMMV5F5dfb1YwcThnaVZXbjg&export=download';
 a['type'] = 'http';
+a['license']
 a['commands'] = [
     'pwd',
     'apt-get -y install build-essential autoconf',
     'tar xvfz source',
-    'cd nutcracker-0.4.0 && CFLAGS="-ggdb3 -O0" ./configure --enable-debug=full && make && make install'
+    'cd nutcracker-' + version + ' && CFLAGS="-ggdb3 -O0" ./configure --enable-debug=full && make && make install'
 ];
 a['depends'] = [];
 a['cwd'] = '';
 a['env'] = [];
-a['version'] = '';
+a['version'] = version;
 a['output'] = 'deb';
 a['package_files'] = [
-    'nutcracker-0.4.0/src/nutcracker' => '/usr/local/sbin/nutcracker',
-    'nutcracker-0.4.0/man/nutcracker.8' => '/usr/local/share/man/man8/nutcracker.8'
+    'nutcracker-' + version + '/src/nutcracker' => '/usr/local/sbin/nutcracker',
+    'nutcracker-' + version + '/man/nutcracker.8' => '/usr/local/share/man/man8/nutcracker.8'
 ];
 a['build_distro'] = 'ubuntu';
 a['build_distro_version'] = '14.04';
