@@ -1,11 +1,13 @@
 {
-  "source": "https://drive.google.com/uc?id=0B6pVMMV5F5dfb1YwcThnaVZXbjg&export=download",
+  "name": "twemproxy",
+  "version": "0.4.1",
+  "source": "https://docs.google.com/uc?id=0B-jblWXS1ZxseGNULWhQWjJwbEE&export=download",
   "type": "http",
   "commands": [
     "pwd",
     "apt-get -y install build-essential autoconf",
     "tar xvfz source",
-    "cd nutcracker-0.4.1 && CFLAGS=\"-ggdb3 -O0\" ./configure --enable-debug=full && make && make install"
+    "umask 022; cd nutcracker-0.4.1 && CFLAGS=\"-ggdb3 -O0\" ./configure --enable-debug=full && make"
   ],
   "depends": [
 
@@ -14,14 +16,13 @@
   "env": [
 
   ],
-  "version": "0.4.1",
   "output": "deb",
-  "package_files": [
-    {
-      "nutcracker-0.4.1/src/nutcracker": "/usr/local/sbin/nutcracker",
-      "nutcracker-0.4.1/man/nutcracker.8": "/usr/local/share/man/man8/nutcracker.8"
-    }
-  ],
+  "package_files": {
+    "nutcracker-0.4.1/scripts/nutcracker.init": "/etc/init.d/nutcracker",
+    "nutcracker-0.4.1/conf/nutcracker.yml": "/etc/nutcracker/nutcracker.yml",
+    "nutcracker-0.4.1/src/nutcracker": "/usr/local/sbin/nutcracker",
+    "nutcracker-0.4.1/man/nutcracker.8": "/usr/local/share/man/man8/nutcracker.8"
+  },
   "build_distro": "ubuntu",
   "build_distro_version": "14.04"
 }

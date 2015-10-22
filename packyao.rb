@@ -5,7 +5,7 @@ version = '0.4.1'
 a = {}
 a['name'] = 'twemproxy';
 a['version'] = version;
-a['source'] = 'https://drive.google.com/uc?id=0B6pVMMV5F5dfb1YwcThnaVZXbjg&export=download';
+a['source'] = 'https://docs.google.com/uc?id=0B-jblWXS1ZxseGNULWhQWjJwbEE&export=download';
 a['type'] = 'http';
 a['license']
 a['commands'] = [
