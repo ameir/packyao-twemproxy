@@ -7,7 +7,7 @@ a['name'] = 'twemproxy';
 a['version'] = version;
 a['source'] = 'https://docs.google.com/uc?id=0B-jblWXS1ZxseGNULWhQWjJwbEE&export=download';
 a['type'] = 'http';
-a['license']
+a['license'] = 'Apache'
 a['commands'] = [
     'pwd',
     'apt-get -y install build-essential autoconf',
@@ -16,7 +16,7 @@ a['commands'] = [
 ];
 a['depends'] = [];
 a['cwd'] = '';
-a['env'] = [];
+a['env'] = {};
 a['output'] = 'deb';
 a['package_files'] = {
   'nutcracker-' + version + '/scripts/nutcracker.init' => '/etc/init.d/nutcracker',
