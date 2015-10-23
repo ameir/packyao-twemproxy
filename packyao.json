@@ -3,6 +3,7 @@
   "version": "0.4.1",
   "source": "https://docs.google.com/uc?id=0B-jblWXS1ZxseGNULWhQWjJwbEE&export=download",
   "type": "http",
+  "license": "Apache",
   "commands": [
     "pwd",
     "apt-get -y install build-essential autoconf",
@@ -13,9 +14,8 @@
 
   ],
   "cwd": "",
-  "env": [
-
-  ],
+  "env": {
+  },
   "output": "deb",
   "package_files": {
     "nutcracker-0.4.1/scripts/nutcracker.init": "/etc/init.d/nutcracker",
