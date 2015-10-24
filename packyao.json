@@ -16,7 +16,10 @@
   "cwd": "",
   "env": {
   },
-  "output": "deb",
+  "outputs": [
+    "deb",
+    "rpm"
+  ],
   "package_files": {
     "nutcracker-0.4.1/scripts/nutcracker.init": "/etc/init.d/nutcracker",
     "nutcracker-0.4.1/conf/nutcracker.yml": "/etc/nutcracker/nutcracker.yml",
