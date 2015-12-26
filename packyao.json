@@ -1,14 +1,9 @@
 {
   "name": "twemproxy",
   "version": "0.4.1",
-  "source": "https://docs.google.com/uc?id=0B-jblWXS1ZxseGNULWhQWjJwbEE&export=download",
-  "type": "http",
   "license": "Apache",
   "commands": [
-    "pwd",
-    "apt-get -y install build-essential autoconf",
-    "tar xvfz source",
-    "umask 022; cd nutcracker-0.4.1 && CFLAGS=\"-ggdb3 -O0\" ./configure --enable-debug=full && make"
+    "  apt-get update\n  apt-get -y install build-essential autoconf\n  wget -O source 'https://drive.google.com/uc?id=0B6pVMMV5F5dfb1YwcThnaVZXbjg&export=download'\n  tar xvfz source\n  cd nutcracker-0.4.1 && CFLAGS=\"-ggdb3 -O0\" ./configure --enable-debug=full && make\n"
   ],
   "depends": [
 

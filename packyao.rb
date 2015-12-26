@@ -5,14 +5,15 @@ version = '0.4.1'
 a = {}
 a['name'] = 'twemproxy'
 a['version'] = version
-a['source'] = 'https://docs.google.com/uc?id=0B-jblWXS1ZxseGNULWhQWjJwbEE&export=download'
-a['type'] = 'http'
 a['license'] = 'Apache'
 a['commands'] = [
-  'pwd',
-  'apt-get -y install build-essential autoconf',
-  'tar xvfz source',
-  'umask 022; cd nutcracker-' + version + ' && CFLAGS="-ggdb3 -O0" ./configure --enable-debug=full && make'
+  <<-EOF
+  apt-get update
+  apt-get -y install build-essential autoconf
+  wget -O source 'https://drive.google.com/uc?id=0B6pVMMV5F5dfb1YwcThnaVZXbjg&export=download'
+  tar xvfz source
+  cd nutcracker-#{version} && CFLAGS="-ggdb3 -O0" ./configure --enable-debug=full && make
+  EOF
 ]
 a['depends'] = []
 a['cwd'] = ''
