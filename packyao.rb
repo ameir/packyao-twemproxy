@@ -9,7 +9,7 @@ a['license'] = 'Apache'
 a['commands'] = [
   <<-EOF
   apt-get update
-  apt-get -y install build-essential autoconf
+  apt-get -y install build-essential autoconf wget curl
   wget -O source 'https://drive.google.com/uc?id=0B6pVMMV5F5dfb1YwcThnaVZXbjg&export=download'
   tar xvfz source
   cd nutcracker-#{version} && CFLAGS="-ggdb3 -O0" ./configure --enable-debug=full && make
@@ -28,4 +28,4 @@ a['package_files'] = {
 a['build_distro'] = 'ubuntu'
 a['build_distro_version'] = '14.04'
 
-File.write('packyao.json', JSON.pretty_generate(a))
+File.write("#{File.dirname(__FILE__)}/packyao.json", JSON.pretty_generate(a))

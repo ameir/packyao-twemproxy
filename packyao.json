@@ -3,7 +3,7 @@
   "version": "0.4.1",
   "license": "Apache",
   "commands": [
-    "  apt-get update\n  apt-get -y install build-essential autoconf\n  wget -O source 'https://drive.google.com/uc?id=0B6pVMMV5F5dfb1YwcThnaVZXbjg&export=download'\n  tar xvfz source\n  cd nutcracker-0.4.1 && CFLAGS=\"-ggdb3 -O0\" ./configure --enable-debug=full && make\n"
+    "  apt-get update\n  apt-get -y install build-essential autoconf wget curl\n  wget -O source 'https://drive.google.com/uc?id=0B6pVMMV5F5dfb1YwcThnaVZXbjg&export=download'\n  tar xvfz source\n  cd nutcracker-0.4.1 && CFLAGS=\"-ggdb3 -O0\" ./configure --enable-debug=full && make\n"
   ],
   "depends": [
 
