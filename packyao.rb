@@ -20,10 +20,10 @@ a['cwd'] = ''
 a['env'] = {}
 a['outputs'] = %w(deb rpm)
 a['package_files'] = {
-  'nutcracker-' + version + '/scripts/nutcracker.init' => '/etc/init.d/nutcracker',
-  'nutcracker-' + version + '/conf/nutcracker.yml' => '/etc/nutcracker/nutcracker.yml',
-  'nutcracker-' + version + '/src/nutcracker' => '/usr/local/sbin/nutcracker',
-  'nutcracker-' + version + '/man/nutcracker.8' => '/usr/local/share/man/man8/nutcracker.8'
+  '/nutcracker-' + version + '/scripts/nutcracker.init' => '/etc/init.d/nutcracker',
+  '/nutcracker-' + version + '/conf/nutcracker.yml' => '/etc/nutcracker/nutcracker.yml',
+  '/nutcracker-' + version + '/src/nutcracker' => '/usr/local/sbin/nutcracker',
+  '/nutcracker-' + version + '/man/nutcracker.8' => '/usr/local/share/man/man8/nutcracker.8'
 }
 a['build_distro'] = 'ubuntu'
 a['build_distro_version'] = '14.04'
